@@ -1,1 +1,282 @@
 {"level":"error","message":"POST /api/option-data - Cannot destructure property 'symbol' of 'req.body' as it is undefined.","timestamp":"2025-09-21T11:36:32.282Z"}
+{"level":"error","message":"PUT /api/option-store - Cannot read properties of undefined (reading 'push')","timestamp":"2025-09-21T15:47:10.669Z"}
+{"level":"error","message":"PUT /api/option-store - todayOptionData.save is not a function","timestamp":"2025-09-21T15:53:58.807Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:00:22.333Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:00:25.046Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:00:35.040Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:00:52.305Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:01:05.030Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:01:22.307Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:01:35.038Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:01:52.306Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:02:05.036Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:02:22.310Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:02:35.041Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:02:52.307Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:03:05.035Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:03:22.295Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:03:35.040Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:03:52.307Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:04:05.037Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:04:22.302Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:04:35.042Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:04:52.308Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:05:05.045Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:05:22.309Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:05:35.043Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:05:52.309Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:06:05.047Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:06:22.318Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:06:35.043Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:06:52.311Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:07:05.046Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:07:22.312Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:07:35.045Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:07:52.311Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:08:05.046Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:08:22.316Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:08:35.044Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:08:52.311Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:09:05.048Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:09:22.317Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:09:35.044Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:09:52.314Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:10:05.049Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:10:22.311Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:10:35.044Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:10:52.315Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:11:05.046Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:11:22.314Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:11:35.045Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:11:52.356Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:12:05.042Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:12:22.309Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:12:35.046Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:12:52.316Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T18:13:05.054Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-21T18:13:52.333Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-21T18:14:05.062Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T20:54:24.495Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T20:54:30.692Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T20:54:40.674Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T20:54:54.495Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T20:55:10.676Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T20:55:24.498Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T20:55:40.672Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T20:55:54.496Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T20:56:10.673Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T20:56:24.496Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T20:56:40.668Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T20:56:54.497Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T20:57:10.676Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-21T20:57:24.500Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-21T20:58:10.685Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-21T20:58:24.511Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-21T20:58:44.531Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-21T20:59:04.548Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-21T20:59:24.568Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-21T20:59:30.767Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-21T20:59:50.787Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-21T21:00:24.628Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-21T21:00:30.829Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-21T21:00:50.845Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-21T21:01:04.666Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:35:18.439Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:35:19.607Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:35:27.779Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:35:49.618Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:35:57.786Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:36:19.617Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:36:27.775Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:36:49.623Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:36:57.786Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:37:19.622Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:37:27.783Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:37:49.621Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:37:57.787Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:38:19.629Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:38:27.776Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:38:49.623Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:38:57.788Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:39:19.626Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:39:27.776Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:39:49.625Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:39:57.787Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:40:19.629Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:40:27.789Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:40:49.625Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:40:57.787Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:41:19.623Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:41:27.785Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:41:49.626Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:41:57.789Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:42:19.630Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:42:27.781Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:42:49.629Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:42:57.794Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:43:19.625Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:43:27.785Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:43:49.631Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:43:57.791Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:44:19.631Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:44:27.785Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:44:49.630Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:44:57.795Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:45:19.633Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:45:27.794Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:45:49.631Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:45:57.793Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:46:19.630Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:46:27.790Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:46:49.633Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:46:57.795Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:47:19.637Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:47:27.793Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:47:49.635Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:47:57.798Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:48:19.640Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:48:27.795Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:48:49.636Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:48:57.797Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:49:19.638Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:49:27.791Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:49:49.637Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T01:49:57.819Z"}
+{"level":"error","message":"POST /api/option-data - getaddrinfo ENOTFOUND www.nseindia.com","timestamp":"2025-09-22T03:48:36.985Z"}
+{"level":"error","message":"PUT /api/option-store - Please put every details","timestamp":"2025-09-22T06:09:30.497Z"}
+{"level":"error","message":"PUT /api/option-store - Please put every details","timestamp":"2025-09-22T06:10:06.862Z"}
+{"level":"error","message":"PUT /api/option-store - Please put every details","timestamp":"2025-09-22T06:11:01.944Z"}
+{"level":"error","message":"PUT /api/option-store - option is not defined","timestamp":"2025-09-22T06:13:04.645Z"}
+{"level":"error","message":"PUT /api/option-store - option is not defined","timestamp":"2025-09-22T06:13:15.285Z"}
+{"level":"error","message":"PUT /api/option-store - OptionData validation failed: data.3.option: Path `option` is required.","timestamp":"2025-09-22T06:13:49.032Z"}
+{"level":"error","message":"PUT /api/option-store - OptionData validation failed: data.3.option: Path `option` is required.","timestamp":"2025-09-22T06:14:15.425Z"}
+{"level":"error","message":"PUT /api/option-store - OptionData validation failed: data.0.options: Path `options` is required., data.1.options: Path `options` is required., data.2.options: Path `options` is required.","timestamp":"2025-09-22T06:15:34.404Z"}
+{"level":"error","message":"PUT /api/option-store - OptionData validation failed: data.0.options: Path `options` is required., data.1.options: Path `options` is required., data.2.options: Path `options` is required.","timestamp":"2025-09-22T06:15:40.450Z"}
+{"level":"error","message":"PUT /api/option-store - OptionData validation failed: data.0.options: Path `options` is required., data.1.options: Path `options` is required., data.2.options: Path `options` is required.","timestamp":"2025-09-22T06:16:36.531Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T06:41:08.987Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T06:43:08.983Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T06:45:08.985Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T06:47:08.987Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T06:49:08.984Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T06:51:08.985Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T06:53:08.986Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T06:55:08.978Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T06:57:08.984Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T06:59:08.985Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:01:08.983Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:03:08.983Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:05:08.983Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:07:08.989Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:09:08.981Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:11:08.986Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:13:08.987Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:15:08.983Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:17:08.979Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:19:08.986Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:21:08.986Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:23:08.987Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:25:08.988Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:27:08.987Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:29:08.987Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:31:08.988Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:33:08.988Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:35:08.990Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:37:08.988Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:39:08.991Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:41:08.996Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:43:08.992Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:45:08.988Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:47:08.991Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:49:08.992Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:51:08.992Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:53:08.991Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:55:08.992Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:57:08.993Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T07:59:08.993Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:01:08.992Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:03:09.000Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:05:08.994Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:07:08.995Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:09:08.994Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:11:08.995Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:13:09.010Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:15:08.995Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:17:08.997Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:19:08.999Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:21:08.994Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:23:08.996Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:25:08.997Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:27:08.997Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:29:08.997Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:31:08.998Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:33:08.999Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:35:08.997Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:37:08.999Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:39:08.999Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:41:09.006Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:43:08.999Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:45:09.466Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:47:09.457Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:49:09.458Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:51:09.462Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:53:09.460Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:53:45.674Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:53:48.576Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:53:54.079Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:53:55.914Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:53:55.925Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:53:59.577Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:54:00.969Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:54:01.169Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:54:01.333Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:54:10.844Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:54:13.156Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:54:13.353Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 2000ms exceeded","timestamp":"2025-09-22T08:54:21.247Z"}
+{"level":"error","message":"POST /api/option-data - filterData is not a function","timestamp":"2025-09-22T09:13:57.246Z"}
+{"level":"error","message":"POST /api/option-data - filterData is not a function","timestamp":"2025-09-22T09:15:57.096Z"}
+{"level":"error","message":"POST /api/option-data - filterData is not a function","timestamp":"2025-09-22T09:17:57.399Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:23:58.318Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:25:13.522Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:25:16.967Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:30:29.958Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:32:29.961Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:34:30.028Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:36:30.026Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:38:30.718Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:38:35.350Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:38:35.358Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:38:41.289Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:38:42.464Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:38:42.704Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:38:42.821Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:42:14.217Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:42:18.102Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:42:22.791Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:42:24.562Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:42:24.568Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 1000ms exceeded","timestamp":"2025-09-22T09:42:34.083Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 5000ms exceeded","timestamp":"2025-09-22T09:45:08.567Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 5000ms exceeded","timestamp":"2025-09-22T09:45:20.763Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 5000ms exceeded","timestamp":"2025-09-22T09:45:30.713Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-22T09:51:13.577Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-22T09:53:14.983Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-22T09:53:55.117Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-22T09:55:16.164Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-22T09:55:23.059Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-22T09:56:30.446Z"}
+{"level":"error","message":"POST /api/option-data - timeout of 10000ms exceeded","timestamp":"2025-09-22T09:57:16.163Z"}
+{"level":"error","message":"POST /api/option-data - Max retries reached while fetching option chain","timestamp":"2025-09-22T10:04:04.184Z"}
+{"level":"error","message":"PUT /api/option-store - Please put every details","timestamp":"2025-09-22T10:37:05.725Z"}
+{"level":"error","message":"PUT /api/option-store - Please put every details","timestamp":"2025-09-22T10:37:33.252Z"}
+{"level":"error","message":"PUT /api/option-store - Please put every details","timestamp":"2025-09-22T10:37:44.369Z"}
+{"level":"error","message":"POST /api/store/pcr - symbol is missing! please enter the symbol index","timestamp":"2025-09-22T10:41:42.523Z"}
+{"level":"error","message":"POST /api/store/pcr - symbol is missing! please enter the symbol index","timestamp":"2025-09-22T10:41:44.568Z"}
+{"level":"error","message":"POST /api/store/pcr - symbol is missing! please enter the symbol index","timestamp":"2025-09-22T10:43:40.269Z"}
+{"level":"error","message":"POST /api/store/pcr - symbol is missing! please enter the symbol index","timestamp":"2025-09-22T10:45:29.884Z"}
+{"level":"error","message":"POST /api/store/pcr - symbol is missing! please enter the symbol index","timestamp":"2025-09-22T10:45:37.678Z"}
+{"level":"error","message":"POST /api/store/pcr - symbol is missing! please enter the symbol index","timestamp":"2025-09-22T10:45:38.089Z"}
+{"level":"error","message":"POST /api/store/pcr - date is missing! please enter the date","timestamp":"2025-09-22T10:46:44.053Z"}
+{"level":"error","message":"POST /api/store/pcr - date is missing! please enter the date","timestamp":"2025-09-22T10:46:44.201Z"}
+{"level":"error","message":"POST /api/store/pcr - date is missing! please enter the date","timestamp":"2025-09-22T10:48:02.108Z"}
+{"level":"error","message":"POST /api/store/pcr - date is missing! please enter the date","timestamp":"2025-09-22T10:48:02.423Z"}

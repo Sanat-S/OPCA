@@ -8,7 +8,7 @@ const optionDataSchema = new mongoose.Schema(
     },
     data: [
       {
-        option: {
+        options: {
           type: Object,
           required: true,
         },

@@ -1,13 +1,12 @@
 const ErrorHandler = require("../utils/errorHandler");
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const NSEService = require("../services/nseService");
-const filterData = require("../utils/filterData");
+const { filterData, filterStoredPcrData } = require("../utils/filterData");
 const OptionData = require("../models/optionDataSchema");
 
 const nseService = new NSEService();
 
 exports.getOptionData = catchAsyncErrors(async (req, res, next) => {
-  console.log("Api Called!");
   const { symbol } = req.body;
 
   if (!symbol) {
@@ -21,33 +20,71 @@ exports.getOptionData = catchAsyncErrors(async (req, res, next) => {
 });
 
 exports.storeOptionData = catchAsyncErrors(async (req, res, next) => {
-  const now = new Date();
-  const startOfDay = new Date(
-    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), 0, 0, 0)
-  );
-  const endOfDay = new Date(
-    Date.UTC(
-      now.getUTCFullYear(),
-      now.getUTCMonth(),
-      now.getUTCDate(),
-      23,
-      59,
-      59,
-      999
-    )
-  );
-  const todayOptionData = await OptionData.find({
-    createdAt: { $gte: startOfDay, $lte: endOfDay },
+  const { symbol, options, totalPutOI, totalCallOI, pcr, date } = req.body;
+
+  if (!symbol || !options || !totalPutOI || !totalCallOI || !pcr || !date) {
+    return next(new ErrorHandler("Please put every details", 400));
+  }
+
+  const upperSymbol = symbol.toUpperCase();
+
+  const todayOptionData = await OptionData.findOne({
+    createdAt: { $gte: date.startOfDay, $lte: date.endOfDay },
+    symbol: upperSymbol,
   });
 
-  const {symbol, option, totalPutOI, totalCallOI, pcr} = req.body;
-  
-  if(!symbol || !option || !totalPutOI || !totalCallOI || !pcr) {
-    return next(new ErrorHandler("Please put every details", 400))
+  if (!todayOptionData) {
+    console.log("created new dt");
+    const optionData = await OptionData.create({
+      symbol: upperSymbol,
+      data: [
+        {
+          options,
+          totalPutOI,
+          totalCallOI,
+          pcr,
+        },
+      ],
+    });
+
+    return res.status(201).json({ success: true, message: "New data created" });
   }
 
-  
-  if (todayOptionData.length == 0) {
-    console.log("Date search is working! --found", todayOptionData);
+  todayOptionData.data.push({
+    options,
+    totalPutOI,
+    totalCallOI,
+    pcr,
+  });
+
+  await todayOptionData.save();
+
+  return res.status(200).json({ success: true, message: "Data stored" });
+});
+
+exports.getStoredPcrData = catchAsyncErrors(async (req, res, next) => {
+  const { symbol, date } = req.body;
+
+  if (!symbol) {
+    return next(
+      new ErrorHandler("symbol is missing! please enter the symbol index", 400)
+    );
   }
+
+  if (!date) {
+    return next(
+      new ErrorHandler("date is missing! please enter the date", 400)
+    );
+  }
+
+  const upperSymbol = symbol.toUpperCase();
+
+  const data = await OptionData.findOne({
+    createdAt: { $gte: date.startOfDay, $lte: date.endOfDay },
+    symbol: upperSymbol,
+  });
+
+  const storedPcrData = filterStoredPcrData(data);
+
+  res.json(storedPcrData);
 });

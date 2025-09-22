@@ -20,7 +20,7 @@ const MainLayout = () => {
       {/* Main content */}
       <div
         className={`transition-all duration-300 ${
-          isCollapsed ? "md:ms-13" : "md:ms-64"
+          isCollapsed ? "md:ms-13" : "md:ms-50"
         }`}
       >
         {isSidebarOpen && (
@@ -29,13 +29,17 @@ const MainLayout = () => {
             onClick={() => setIsSidebarOpen(false)}
           />
         )}
-        <Header
-          isCollapsed={isCollapsed}
-          setIsCollapsed={setIsCollapsed}
-          isSidebarOpen={isSidebarOpen}
-          setIsSidebarOpen={setIsSidebarOpen}
-        />
-        <Outlet />
+        <div className="md:hidden">
+          <Header
+            isCollapsed={isCollapsed}
+            setIsCollapsed={setIsCollapsed}
+            isSidebarOpen={isSidebarOpen}
+            setIsSidebarOpen={setIsSidebarOpen}
+          />
+        </div>
+        <div className="pt-[50px] md:pt-0">
+          <Outlet />
+        </div>
       </div>
     </div>
   );

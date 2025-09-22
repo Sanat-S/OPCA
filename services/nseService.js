@@ -1,4 +1,6 @@
 const axios = require("axios");
+const http = require("http");
+const https = require("https");
 
 class NSEService {
   constructor() {
@@ -13,20 +15,25 @@ class NSEService {
       Origin: "https://www.nseindia.com",
       Connection: "keep-alive",
     };
+
+    // axios instance with keepAlive
+    this.client = axios.create({
+      headers: this.headers,
+      httpAgent: new http.Agent({ keepAlive: true }),
+      httpsAgent: new https.Agent({ keepAlive: true }),
+      timeout: 15000, // give NSE enough time
+    });
   }
 
   async refreshCookies() {
     try {
-      const response = await axios.get("https://www.nseindia.com/option-chain", {
-        headers: this.headers,
-      });
-
+      const response = await this.client.get(
+        "https://www.nseindia.com/option-chain"
+      );
       const setCookies = response.headers["set-cookie"];
       if (setCookies) {
-        // Convert cookie array -> single string
-        this.cookieString = setCookies.map(c => c.split(";")[0]).join("; ");
+        this.cookieString = setCookies.map((c) => c.split(";")[0]).join("; ");
       }
-
       return true;
     } catch (error) {
       console.error("Cookie refresh failed:", error.message);
@@ -34,42 +41,34 @@ class NSEService {
     }
   }
 
-  async getOptionChain(symbol) {
-    // Refresh cookies first
+  async getOptionChain(symbol, retries = 3) {
     await this.refreshCookies();
 
-    try {
-      const response = await axios.get(
-        `https://www.nseindia.com/api/option-chain-indices?symbol=${symbol}`,
-        {
-          headers: {
-            ...this.headers,
-            Cookie: this.cookieString,
-          },
-          timeout: 10000,
+    const url = `https://www.nseindia.com/api/option-chain-indices?symbol=${symbol}`;
+
+    for (let attempt = 1; attempt <= retries; attempt++) {
+      try {
+        const response = await this.client.get(url, {
+          headers: { ...this.headers, Cookie: this.cookieString },
+        });
+        return response.data;
+      } catch (error) {
+        if (error.response?.status === 401 || error.response?.status === 403) {
+          console.log("Auth error, refreshing cookies...");
+          await this.refreshCookies();
+        } else if (error.code === "ECONNABORTED") {
+          console.warn(`Timeout on attempt ${attempt}, retrying...`);
+        } else {
+          console.error("Option chain fetch failed:", error.message);
+          throw error;
         }
-      );
 
-      return response.data;
-    } catch (error) {
-      if (error.response?.status === 401 || error.response?.status === 403) {
-        console.log("Retrying with fresh cookies...");
-        await this.refreshCookies();
-
-        const retryResponse = await axios.get(
-          `https://www.nseindia.com/api/option-chain-indices?symbol=${symbol}`,
-          {
-            headers: {
-              ...this.headers,
-              Cookie: this.cookieString,
-            },
-          }
-        );
-        return retryResponse.data;
+        // small delay before retry
+        await new Promise((res) => setTimeout(res, 2000 * attempt));
       }
-      console.error("Option chain fetch failed:", error.message);
-      throw error;
     }
+
+    throw new Error("Max retries reached while fetching option chain");
   }
 }
 

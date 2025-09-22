@@ -21,7 +21,7 @@ const AsideBar = (props) => {
       <aside
         className={`hs-overlay transition-all duration-300 transform fixed inset-y-0 z-70 start-0 overflow-hidden bg-white border-e border-gray-200 dark:border-neutral-700 dark:bg-neutral-800 md:translate-x-0 md:block
             ${props.isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
-            ${props.isCollapsed ? "md:w-13" : "w-64"}
+            ${props.isCollapsed ? "md:w-13" : "w-50"}
         `}
         role="dialog"
         tabIndex="-1"

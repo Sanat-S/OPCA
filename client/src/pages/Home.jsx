@@ -3,16 +3,44 @@ import Header from "../components/common/Header.jsx";
 import Navbar from "../components/common/Navbar.jsx";
 import { useEffect } from "react";
 
+// let data = [
+//   {
+//     putOI: "100000",
+//     callOI: "200000",
+//     pcr: "0.5",
+//     time: "2025-09-21T16:02:07.954Z",
+//   },
+//   {
+//     putOI: "100060",
+//     callOI: "200300",
+//     pcr: "0.6",
+//     time: "2025-09-21T16:05:07.954Z",
+//   },
+//   {
+//     putOI: "100060",
+//     callOI: "200300",
+//     pcr: "0.6",
+//     time: "2025-09-21T16:05:07.954Z",
+//   },
+//   {
+//     putOI: "100030",
+//     callOI: "200400",
+//     pcr: "0.5",
+//     time: "2025-09-21T16:05:07.954Z",
+//   },
+// ];
+
 const Home = () => {
-  const [symbol, setSymbol] = useState("NIFTY");
+  const [symbol, setSymbol] = useState("nifty");
   const [optionData, setOptionData] = useState(null);
   const [underlying, setUnderlying] = useState(null);
   const [options, setOptions] = useState(null);
   const [atm, setAtm] = useState(null);
   const [pcr, setPcr] = useState(0.0);
-  const [changeOiPcr, setChangeOiPcr] = useState(0.0);
-
-  const renge = 90
+  const [putOI, setPutOI] = useState(0);
+  const [callOI, setCallOI] = useState(0);
+  const [storedPcrData, setStoredPcrData] = useState(null);
+  const [date, setDate] = useState(null);
 
   const fetchOptionData = async () => {
     try {
@@ -31,6 +59,75 @@ const Home = () => {
     }
   };
 
+  const fetchOptionStore = async (payload) => {
+    try {
+      const res = await fetch("http://localhost:3000/api/option-store", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        throw new Error(`HTTP Error! status: ${res.status}`);
+      }
+
+      const response = await res.json();
+      console.log(response?.message);
+    } catch (err) {
+      console.error("Error updating option:", err.message);
+    }
+  };
+
+  const fetchStoredPcr = async (payload) => {
+    try {
+      const res = await fetch("http://localhost:3000/api/store/pcr", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        throw new Error(`HTTP Error! status: ${res.status}`);
+      }
+
+      const response = await res.json();
+      setStoredPcrData(response?.pcrData);
+    } catch (err) {
+      console.error("Error fetching option data:", err);
+    }
+  };
+
+  // get current date
+
+  const getDate = () => {
+    const now = new Date();
+    const startOfDay = new Date(
+      Date.UTC(
+        now.getUTCFullYear(),
+        now.getUTCMonth(),
+        now.getUTCDate(),
+        0,
+        0,
+        0
+      )
+    );
+    const endOfDay = new Date(
+      Date.UTC(
+        now.getUTCFullYear(),
+        now.getUTCMonth(),
+        now.getUTCDate(),
+        23,
+        59,
+        59,
+        999
+      )
+    );
+
+    const date = { startOfDay, endOfDay };
+    setDate(date);
+  };
+
+  // get atm
   const getAtm = (options, underlying) => {
     if (!options || !options.length) {
       return;
@@ -46,164 +143,272 @@ const Home = () => {
     setAtm(atm.strikePrice);
   };
 
-  useEffect(() => {
-    const runAll = async () => {
-      const data = await fetchOptionData();
-      if (data?.options && data?.underlying) {
-        getAtm(data.options, data.underlying);
-      }
-    };
-
-    runAll(); // run once
-    const interval = setInterval(runAll, 30000);
-
-    return () => clearInterval(interval);
-  }, [symbol]);
-
-  const handleRengeChange = (e) => {
-    const value = Number(e.target.value); // ensure it's a number
-    setRenge(value);
-  };
-
-  const handleCalculatePcr = () => {
-    const runAll = async () => {
-      await fetchOptionData();
-      if (options && underlying) {
-        getAtm(options, underlying);
-      }
-    };
-
-    runAll(); // run once
-
+  // get OI and Pcr
+  const getOiAndPcr = (options) => {
     if (!options || !options.length) {
       return;
     }
 
-    // Find the ATM strike
-    const atm = options.reduce((prev, curr) => {
-      return Math.abs(curr.strikePrice - underlying) <
-        Math.abs(prev.strikePrice - underlying)
-        ? curr
-        : prev;
-    });
+    const putOI = options.reduce((sum, oi) => sum + oi.putOI, 0);
+    const callOI = options.reduce((sum, oi) => sum + oi.callOI, 0);
 
-    // Find index of ATM
-    const index = options.indexOf(atm);
+    setPutOI(putOI);
+    setCallOI(callOI);
 
-    // Slice strikes using renge
-    const strickPrice = options.slice(
-      Math.max(0, index - (renge - 1)),
-      index + renge
-    );
-
-    // Calculate OI
-    const putOi = strickPrice.reduce((sum, obj) => sum + obj.putOI, 0);
-    const callOi = strickPrice.reduce((sum, obj) => sum + obj.callOI, 0);
-
-    const putChangeOI = strickPrice.reduce(
-      (sum, obj) => sum + obj.putChangeOI,
-      0
-    );
-    const callChangeOI = strickPrice.reduce(
-      (sum, obj) => sum + obj.callChangeOI,
-      0
-    );
-
-    // Avoid divide-by-zero
     let pcr = 0;
-    if (callOi !== 0) {
-      pcr = (putOi / callOi).toFixed(5);
-    } else {
-      pcr = "N/A";
+    if (callOI !== 0) {
+      pcr = (putOI / callOI).toFixed(2);
     }
-
-    let changeOiPcr = 0;
-    if (callChangeOI !== 0) {
-      changeOiPcr = (putChangeOI / callChangeOI).toFixed(5);
-    } else {
-      changeOiPcr = "N/A";
-    }
-
     setPcr(pcr);
-    setChangeOiPcr(changeOiPcr);
+    console.log("2", putOI, callOI, pcr);
+  };
+
+  const formatTime = (timeStr) => {
+    const date = new Date(timeStr);
+    return date.toLocaleTimeString("en-GB", { hour12: false }); // 24-hour format
+  };
+
+  // compare current vs previous and set color
+  const getClass = (curr, prev) => {
+    if (curr > prev) return "text-green-500 font-bold";
+    if (curr < prev) return "text-red-500 font-bold";
+    return "text-gray-800 dark:text-neutral-200";
+  };
+
+  useEffect(() => {
+    const runAll = async () => {
+      const data = await fetchOptionData();
+      if (!data?.options || !data?.underlying) return;
+
+      // compute directly
+      const atm = getAtm(data.options, data.underlying);
+      const { putOI, callOI, pcr } = getOiAndPcr(data.options);
+
+      if (putOI && callOI && pcr && date && symbol) {
+        await fetchOptionStore({
+          symbol,
+          options: data.options,
+          totalPutOI: putOI,
+          totalCallOI: callOI,
+          pcr,
+          date,
+        });
+      }
+
+      if (symbol && date) {
+        await fetchStoredPcr({ symbol, date: currentDate });
+      }
+    };
+
+    getDate();
+    runAll(); // run once
+    const interval = setInterval(runAll, 600000);
+
+    return () => clearInterval(interval);
+  }, [symbol, date]);
+
+  const handleRefresh = async () => {
+    getDate();
+    const data = await fetchOptionData();
+    if (data?.options && data?.underlying) {
+      getAtm(data.options, data.underlying);
+      getOiAndPcr(data?.options);
+    }
+
+    if (data?.options && data?.underlying && putOI && callOI && pcr && date) {
+      await fetchOptionStore({
+        symbol: "nifty",
+        options: data.options,
+        totalPutOI: putOI,
+        totalCallOI: callOI,
+        pcr,
+        date,
+      });
+    }
+
+    if (symbol && date) {
+      await fetchStoredPcr({ symbol: symbol, date: date });
+    }
   };
 
   return (
     <div>
-      <div className="flex flex-col lg:flex-row h-screen">
+      <div className="flex flex-col lg:flex-row h-full">
         {/* Main section */}
         <div className="w-full lg:w-3/4 flex flex-col border-b lg:border-b-0 lg:border-r border-gray-300">
           {/* Top content */}
-          <div className="flex-1 p-4 overflow-y-auto">
-            {/* You can put charts, tables, or other content here */}
-            <h1 className="text-xl font-bold mb-4">Dashboard</h1>
-            <p className="text-gray-700">Main market content will go here...</p>
-          </div>
 
-          {/* Bottom control panel */}
-          <div className="h-auto lg:h-1/5 p-4 bg-gray-100 border-t border-gray-300 flex flex-col justify-center">
-            <div className="w-full flex flex-wrap justify-evenly items-center gap-4">
+          <div className="flex-1 p-4 overflow-x-auto">
+            <table className="w-full table-fixed text-sm text-left border border-gray-200 dark:border-neutral-700 rounded-lg">
+              <thead className="bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-neutral-300 text-xs uppercase">
+                <tr>
+                  <th className="px-3 py-2">Call OI</th>
+                  <th className="px-3 py-2">CE Chg OI</th>
+                  <th className="px-3 py-2">Call LTP</th>
+                  <th className="px-3 py-2">Call Vol</th>
+                  <th className="px-3 py-2">Strike</th>
+                  <th className="px-3 py-2">Put Vol</th>
+                  <th className="px-3 py-2">Put LTP</th>
+                  <th className="px-3 py-2">PE Chg OI</th>
+                  <th className="px-3 py-2">Put OI</th>
+                </tr>
+              </thead>
+            </table>
 
-              {/* ATM */}
-              <div className="flex items-center gap-2">
-                <input
-                  id="currAtm"
-                  disabled
-                  value={atm}
-                  className="w-24 h-8 text-lg font-semibold border border-gray-400 rounded-md px-2 bg-gray-200"
-                />
-              </div>
-
-              {/* Button */}
-              <button
-                onClick={handleCalculatePcr}
-                className="px-3 h-8 text-sm font-semibold border border-gray-400 rounded-md bg-blue-500 text-white hover:bg-blue-600 focus:ring-2 focus:ring-blue-300"
-              >
-                Calculate PCR
-              </button>
-
-              {/* PCR result */}
-              <div className="flex items-center gap-2">
-                <label
-                  htmlFor="result"
-                  className="text-sm font-semibold whitespace-nowrap"
-                >
-                  OI PCR:
-                </label>
-                <input
-                  id="result"
-                  disabled
-                  value={pcr}
-                  className="w-24 h-8 text-lg font-semibold border border-gray-400 rounded-md px-2 bg-gray-200"
-                />
-              </div>
-
-              {/* Change Oi Pcr */}
-              <div className="flex items-center gap-2">
-                <label
-                  htmlFor="result"
-                  className="text-sm font-semibold whitespace-nowrap"
-                >
-                  Change OI PCR:
-                </label>
-                <input
-                  id="result"
-                  disabled
-                  value={changeOiPcr}
-                  className="w-24 h-8 text-lg font-semibold border border-gray-400 rounded-md px-2 bg-gray-200"
-                />
-              </div>
+            {/* Scrollable body */}
+            <div className="max-h-[calc(100vh-66px)] overflow-y-auto">
+              <table className="w-full table-fixed text-sm text-left border border-gray-200 dark:border-neutral-700">
+                <tbody>
+                  {options && options.length > 0 ? (
+                    options.map((opt, idx) => (
+                      <tr
+                        key={idx}
+                        className={`border-b border-gray-200 dark:border-neutral-700 transition-colors ${
+                          atm === opt.strikePrice
+                            ? "bg-blue-200 dark:bg-blue-900"
+                            : idx % 2 === 0
+                            ? "bg-white dark:bg-neutral-900"
+                            : "bg-gray-50 dark:bg-neutral-800"
+                        }`}
+                      >
+                        <td className="px-3 py-2 text-gray-800 dark:text-neutral-200">
+                          {opt.callOI}
+                        </td>
+                        <td className="px-3 py-2 text-gray-800 dark:text-neutral-200">
+                          {opt.callChangeOI}
+                        </td>
+                        <td className="px-3 py-2 text-gray-800 dark:text-neutral-200">
+                          {opt.callLTP}
+                        </td>
+                        <td className="px-3 py-2 text-gray-800 dark:text-neutral-200">
+                          {opt.callVolume}
+                        </td>
+                        <td className="px-3 py-2 font-semibold text-gray-900 dark:text-neutral-100">
+                          {opt.strikePrice}
+                        </td>
+                        <td className="px-3 py-2 text-gray-800 dark:text-neutral-200">
+                          {opt.putVolume}
+                        </td>
+                        <td className="px-3 py-2 text-gray-800 dark:text-neutral-200">
+                          {opt.putLTP}
+                        </td>
+                        <td className="px-3 py-2 text-gray-800 dark:text-neutral-200">
+                          {opt.putChangeOI}
+                        </td>
+                        <td className="px-3 py-2 text-gray-800 dark:text-neutral-200">
+                          {opt.putOI}
+                        </td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td
+                        colSpan="9"
+                        className="text-center py-4 text-gray-500 dark:text-neutral-400"
+                      >
+                        Loading option chain...
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
 
         {/* Right section (placeholder for extra widgets / sidebar content) */}
-        <div className="w-full lg:w-1/4 lg:h-screen p-4">
-          <h2 className="text-lg font-semibold mb-2">Extra Panel</h2>
-          <p className="text-gray-600">
-            You can use this section for ads, market summary, or quick stats.
-          </p>
+
+        <div className="w-full lg:w-2/6 lg:h-full p-4">
+          <table className="w-full table-fixed text-sm text-left border border-gray-200 dark:border-neutral-700 rounded-lg">
+            <thead className="bg-gray-100 dark:bg-neutral-800 text-gray-700 dark:text-neutral-300 text-xs uppercase">
+              <tr>
+                <th className="px-3 py-2">Time</th>
+                <th className="px-3 py-2">Put OI</th>
+                <th className="px-3 py-2">Call OI</th>
+                <th className="px-3 py-2">PCR</th>
+              </tr>
+            </thead>
+          </table>
+
+          {/* Scrollable tbody */}
+          <div className="max-h-[calc(100vh-66px)] overflow-y-auto">
+            <table className="w-full table-fixed text-sm text-left border border-gray-200 dark:border-neutral-700">
+              <tbody>
+                {storedPcrData && storedPcrData.length > 0 ? (
+                  storedPcrData.map((row, idx) => {
+                    const prev = storedPcrData[idx - 1] || {};
+                    return (
+                      <tr
+                        key={idx}
+                        className={`border-b border-gray-200 dark:border-neutral-700 transition-colors ${
+                          idx % 2 === 0
+                            ? "bg-white dark:bg-neutral-900"
+                            : "bg-gray-50 dark:bg-neutral-800"
+                        }`}
+                      >
+                        <td className="px-3 py-2 text-gray-800 dark:text-neutral-200 text-xs font-semibold">
+                          {formatTime(row.created_at)} :
+                        </td>
+                        <td
+                          className={`px-3 py-2 ${
+                            idx > 0
+                              ? getClass(
+                                  Number(row.totalPutOI),
+                                  Number(prev.totalPutOI)
+                                )
+                              : "text-gray-800 dark:text-neutral-200"
+                          }`}
+                        >
+                          {row.totalPutOI}
+                        </td>
+                        <td
+                          className={`px-3 py-2 ${
+                            idx > 0
+                              ? getClass(
+                                  Number(row.totalCallOI),
+                                  Number(prev.totalCallOI)
+                                )
+                              : "text-gray-800 dark:text-neutral-200"
+                          }`}
+                        >
+                          {row.totalCallOI}
+                        </td>
+                        <td
+                          className={`px-3 py-2 ${
+                            idx > 0
+                              ? getClass(Number(row.pcr), Number(prev.pcr))
+                              : "text-gray-800 dark:text-neutral-200"
+                          }`}
+                        >
+                          {row.pcr}
+                        </td>
+                      </tr>
+                    );
+                  })
+                ) : (
+                  <tr>
+                    <td
+                      colSpan="4"
+                      className="text-center py-4 text-gray-500 dark:text-neutral-400"
+                    >
+                      No data available...
+                    </td>
+                  </tr>
+                )}
+              </tbody>
+            </table>
+          </div>
         </div>
+      </div>
+
+      {/* Floating Button */}
+      <div className="fixed bottom-10 left-1/2 transform -translate-x-1/2">
+        <button
+          className="px-4 py-2 bg-blue-600 text-white font-semibold text-md rounded-full shadow-lg hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-600 transition"
+          onClick={handleRefresh}
+        >
+          Refresh
+        </button>
       </div>
     </div>
   );
